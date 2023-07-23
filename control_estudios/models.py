@@ -6,7 +6,7 @@ class Curso(models.Model):
     #Los atributos de clase son las columnas en la bd
     nombre=models.CharField(max_length=64)
     comision=models.IntegerField()
-    orientacion=models.CharField(max_length=128)
+    
 
 
 class Estudiante(models.Model):
