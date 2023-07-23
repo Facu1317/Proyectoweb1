@@ -1,0 +1,20 @@
+
+<h1>CONCHA DE TU MADRE. La comision es {{Comision}}. El autor fue {{Autor}} </h1>
+
+        <h3>Los alumnos son: </h3>
+
+        <ul>
+
+            {% for estudiante in estudiantes %}
+                <li>{{estudiante.apellido}}, {{estudiante.nombre}}
+                {% if estudiante.nota >= 6%}
+                    -----APROBO EL FORRO
+                {% else %}
+                    -----DESAPROBO EL GIL JAJAAJJAJAAJAJJA
+                {% endif %}
+                </li>
+
+            {% endfor  %}
+
+
+        </ul>    
