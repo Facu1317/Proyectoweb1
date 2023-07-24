@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 def listar_estudiantes(request):
     contexto = {
-        "profesor": "Pedro",
+        
         "Comision":"55350",
         "Escuela":"Codehouse",
         "Autor":"Facu",
@@ -24,3 +24,17 @@ def listar_estudiantes(request):
     return http_response
 
 
+def listar_cursos(request):
+    contexto={
+        "cursos":[
+            {"nombre":"Estadistica II", "profesor":"Vietri"},
+            {"nombre":"Analisis Numerico","profesor":"Conocchiari"},
+            {"nombre": "Calculo Financiero","profesor":"Millia"},
+         ]
+        }
+    http_response = render(
+        request=request,
+        template_name='control_estudios/listar_cursos.html',
+        context=contexto,
+    )
+    return http_response

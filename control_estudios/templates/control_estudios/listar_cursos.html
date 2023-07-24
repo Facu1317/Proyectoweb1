@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <title>  profesores  </title>
+        <meta name="description" content="Our first page">
+        <meta name="keywords" content="html tutorial template">
+    </head>
+
+    <body>
+        <h1> PRESENTAMOS LOS CURSOS Y PROFES DE ESTA ACADEMIA  </h1>
+        
+
+        <h3>Los cursos son: </h3>
+
+        <ul>
+
+            {% for curso in cursos %}
+                <li>{{curso.profesor}}, {{curso.nombre}}
+                {% if curso.profesor == "Millia" %}
+                    -----Mejor profesor  historia
+                
+                {% endif %}
+                </li>
+
+            {% endfor  %}
+
+
+        </ul>  
+        <img src="https://teatrocolon.org.ar/sites/default/files/styles/d8_standard/public/2023-06/ch_el-lobizon_redes_web.png?itok=epdda-1w" alt="Descripción_de_la_imagen">  
+                
+
+
+
+    </body>
+<html>
+    
