@@ -1,12 +1,10 @@
-<!doctype html>
-<html>
-    <head>
-        <title>  plataforma coder </title>
-        <meta name="description" content="Our first page">
-        <meta name="keywords" content="html tutorial template">
-    </head>
 
-    <body>
+
+{% extends 'base.html' %}
+{%block titulo%}
+Lista de estudiantes
+{%endblock titulo%}
+{%block contenido%}
         <h1> BIENVENIDOS A LA PLATAFORMA </h1>
         <h1>La comision es {{Comision}}. El autor fue {{Autor}} </h1>
 
@@ -34,6 +32,5 @@
 
 
 
-    </body>
-<html>
+{%endblock contenido%}
     

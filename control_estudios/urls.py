@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from control_estudios.views import listar_estudiantes, listar_cursos
+from control_estudios.views import *
 
 #Urls especificas de la app
 urlpatterns = [

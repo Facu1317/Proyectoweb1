@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from primer_proyectoweb.views import saludar, saludar_con_fecha, saludar_con_html
+from primer_proyectoweb.views import *
 
 #Urls generales
 urlpatterns = [
@@ -24,6 +24,6 @@ urlpatterns = [
     path("estudios/", include("control_estudios.urls")),
     path("saludo/", saludar ),
     path("saludo_con_fecha", saludar_con_fecha ),
-    path("saludo con html", saludar_con_html),
+    path("", inicio),
     
 ]
