@@ -24,6 +24,7 @@ urlpatterns = [
     path("estudios/", include("control_estudios.urls")),
     path("saludo/", saludar ),
     path("saludo_con_fecha", saludar_con_fecha ),
-    path("", inicio),
+    path("", inicio, name="inicio"),
+    
     
 ]

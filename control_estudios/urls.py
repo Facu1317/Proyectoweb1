@@ -5,6 +5,6 @@ from control_estudios.views import *
 #Urls especificas de la app
 urlpatterns = [
     
-    path("listarEstudiantes/", listar_estudiantes),
-    path("listarCursos/", listar_cursos)
+    path("listarEstudiantes/", listar_estudiantes, name="Lista de estudiantes"),
+    path("listarCursos/", listar_cursos, name="Lista de cursos")
 ]
