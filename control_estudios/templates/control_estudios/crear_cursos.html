@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Crear curso
+{% endblock titulo %}
+
+{% block contenido %}
+
+
+<div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+    <form action="{% url 'Creacion de cursos' %}" method="post">
+        {% csrf_token %}
+        <p>Nombre del curso</p>
+        <input type="text" name="nombre">
+        <p>Comision</p>
+        <input type="number" name="comision" step="1">
+        <p>Profesor</p>
+        <input type="text" name="profesor">
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+{% endblock contenido %}
+
+
+
+<!-- el metodo que se usa para crear es post, el name que va en el input es el nombre de campo en la BD
+el tipo indica que tipo de dato, el submit envia, en el atributo value se pone lo que ice. csrf_token 
+token de seguridad, para prevenir fising, siempre se debe incluir en formularios
+
+Los formularios tienen una peticion tipo POST(hacer modificacion en el servidor, agregan info a la BD)
+Nuestra vistas debe manjear el metodo get(peticion de lectura a la url) y el post
+
+
+-->
